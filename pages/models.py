@@ -15,11 +15,25 @@ class Book(models.Model):
     author = models.ForeignKey(
         Author,
         on_delete=models.CASCADE,
-        related_name='books',
-        related_query_name='book',
+        related_name='book',
+        related_query_name='books',
     )
     rating = models.FloatField(blank=True)
+
+    class Meta:
+        verbose_name = 'Book'
+        verbose_name_plural = 'Books'
+        ordering = ['publication_date']
 
     def __str__(self):
         return self.title
 
+
+class Publisher(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    class Meta:
+        verbose_name_plural = 'Publishers'
+
+    def __str__(self):
+        return self.name
