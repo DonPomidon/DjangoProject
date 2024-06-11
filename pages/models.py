@@ -12,7 +12,7 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=100)
     publication_date = models.DateField(blank=False)
-    author = models.ForeignKey(
+    author = models.OneToOneField(
         Author,
         on_delete=models.CASCADE,
         related_name='book',
@@ -31,6 +31,13 @@ class Book(models.Model):
 
 class Publisher(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    books = models.ForeignKey(
+        Book,
+        on_delete=models.CASCADE,
+        related_name='publisher',
+        related_query_name='publishers',
+        null=True,
+    )
 
     class Meta:
         verbose_name_plural = 'Publishers'
