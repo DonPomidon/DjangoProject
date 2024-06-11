@@ -31,16 +31,24 @@ class Book(models.Model):
 
 class Publisher(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    books = models.ForeignKey(
+    books = models.ManyToManyField(
         Book,
-        on_delete=models.CASCADE,
         related_name='publisher',
         related_query_name='publishers',
-        null=True,
     )
 
     class Meta:
         verbose_name_plural = 'Publishers'
+
+    def __str__(self):
+        return self.name
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    class Meta:
+        verbose_name_plural = 'Categories'
 
     def __str__(self):
         return self.name

@@ -24,10 +24,24 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" object-ref="schemas/main/tables/pages_publisher_books" />
+      <object connection-id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" object-ref="schemas/main/tables/pages_publisher" />
+      <object connection-id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" object-ref="schemas/main/tables/pages_book" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" dataset="main.pages_publisher" active-filter-id="EMPTY_FILTER">
+      <filter id="f5691034-43d8-4311-8dba-b6d7cab5835d" name="New Publisher" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="name" operator="=" value="New Publisher" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" dataset="main.pages_author" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" dataset="main.pages_publisher_books" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" dataset="main.pages_book" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
