@@ -16,7 +16,7 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="6dedfa42-fae8-411c-b804-d91f876eb638">
+    <connection id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e">
       <console name="MyDataBase" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
@@ -27,7 +27,7 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="6dedfa42-fae8-411c-b804-d91f876eb638" />
+    <connection id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -46,7 +46,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="6dedfa42-fae8-411c-b804-d91f876eb638" active="true" signed="true">
+      <connection id="0a1fb2b9-aa80-4b4a-9d04-89bc55bb4a4e" active="true" signed="true">
         <database>
           <name value="MyDataBase" />
           <description value="" />
