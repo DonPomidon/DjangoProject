@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block header %}
+    <h1>Hello, {{ name|upper }}</h1>
+    <p>{{ text|truncatechars:4 }}</p>
+    <header>
+        <nav>
+            <ul class="nav_bar">
+                <li><a href="{% url 'authors' %}">Authors</a></li>
+                <li><a href="{% url 'books' %}">Books</a></li>
+                <li><a href="{% url 'publishers' %}">Publishers</a></li>
+            </ul>
+        </nav>
+    </header>
+{% endblock header %}

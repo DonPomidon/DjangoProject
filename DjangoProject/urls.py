@@ -16,9 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages.views import HomePageView
+from pages.views import (home_page, current_datetime, authors, books, publishers, authors_books_information)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomePageView),
+    path('', home_page, name='home_page'),
+    path('current_datetime/', current_datetime, name='current_datetime'),
+    path('authors/', authors, name='authors'),
+    path('books/', books, name='books'),
+    path('publishers/', publishers, name='publishers'),
+    path('authors_books_information/', authors_books_information, name='authors_books_information'),
 ]
