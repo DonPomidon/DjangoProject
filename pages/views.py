@@ -5,10 +5,12 @@ import datetime
 
 
 def home_page(request):
+    authors = Author.objects.all()
     context = {
         'title': 'Main page',
         'name': 'Djonas',
         'text': 'Hello!',
+        'authors': authors,
     }
     return render(request, 'home_page.html', context)
 
@@ -21,17 +23,19 @@ def current_datetime(request):
 
 def authors(request):
     all_authors = Author.objects.all()
-    return render(request, 'authors.html', {'authors': all_authors})
+    return render(request, 'authors.html', {'authors': all_authors, 'all_authors': all_authors})
 
 
 def books(request):
     all_books = Book.objects.all()
-    return render(request, 'books.html', {'books': all_books})
+    authors = Author.objects.all()
+    return render(request, 'books.html', {'books': all_books, 'authors': authors})
 
 
 def publishers(request):
     all_publishers = Publisher.objects.all()
-    return render(request, 'publishers.html', {'publishers': all_publishers})
+    authors = Author.objects.all()
+    return render(request, 'publishers.html', {'publishers': all_publishers, 'authors': authors})
 
 
 def authors_books_information(request):
@@ -49,4 +53,5 @@ def authors_books_information(request):
     else:
         books_info = [("No author selected",)]
 
-    return render(request, 'authors_books_information.html', {'books_info': books_info})
+    authors = Author.objects.all()
+    return render(request, 'authors_books_information.html', {'books_info': books_info, 'authors': authors})
